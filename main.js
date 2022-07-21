@@ -23,3 +23,15 @@ console.log(arrayJefe.includes(' estamos enviando una patrulla esta yendo su cas
 
 preguntaJefe(espera)
 
+
+
+
+const jefeG= {
+    nombre: "jefe gorgory",
+    dialogo: "Estamos todos arrestados"
+}
+
+console.log (jefeG.dialogo);
+
+
+
