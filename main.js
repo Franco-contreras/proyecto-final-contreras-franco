@@ -23,15 +23,33 @@ console.log(arrayJefe.includes(' estamos enviando una patrulla esta yendo su cas
 
 preguntaJefe(espera)
 
-
-
-
-const jefeG= {
+const jefeG = {
     nombre: "jefe gorgory",
-    dialogo: "Estamos todos arrestados"
+    dialogo: "Estamos todos arrestados",
+    advertencia: "ya pasaron 5 segundos",
+}
+// bucle de tiempo por que no se a que ponerle un bucle 
+var tiempo = 0
+for (i = 0; i >= 5000; i++) {
+    if (i === 1000)
+        tiempo += 1
+    if (i === 2000)
+        tiempo += 1
+    if (i === 3000)
+        tiempo += 1
+    if (i === 4000)
+        tiempo += 1
+    if (i === 5000)
+        tiempo += 1
+
 }
 
-console.log (jefeG.dialogo);
+console.log(jefeG.advertencia + tiempo)
+
+
+
+
+console.log(jefeG.dialogo);
 
 
 
