@@ -57,3 +57,13 @@ h4 {
     display: flex;
     justify-content: center;
 }
+
+.contCar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.car{
+    width: 160px;
+    height: 140px;
+}

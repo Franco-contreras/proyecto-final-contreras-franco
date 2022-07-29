@@ -10,16 +10,29 @@ let espera = 'y Mientras espera compre una gorra , una camiseta de policia , tie
 
 
 
+let burbujaNo = document.createElement("p");
+burbujaNo.innerHTML = "<h3> ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa</h3>"
+
+const divJefe = document.querySelector(".jefe");
+console.log (divJefe.children);
+
+let burbujaYes = document.createElement("p");
+burbujaYes.innerHTML = "<h3> estamos mandando un movil a su ubicacion</h3>"
+
+
+
 
 let jefePregunta = prompt('si ha cometido un delito y quiere confesarlo , escriba si , si no es asi escriba no')
-const arrayJefe = ['ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla para su casa', ' estamos enviando una patrulla esta yendo su casa ']
+//const arrayJefe = ['ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla para su casa', ' estamos enviando una patrulla esta yendo su casa ']
 
 if (jefePregunta === 'si') {
-    alert(arrayJefe[1])
-} else alert(arrayJefe[0])
+    divJefe.insertBefore(burbujaYes,divJefe.childNodes[1])
+    //alert(arrayJefe[1])
+} else divJefe.insertBefore(burbujaNo,divJefe.children[1] ) 
+//alert(arrayJefe[0])
 
-console.log(arrayJefe.includes('ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla para su casa', ' estamos enviando una patrulla esta yendo su casa '));
-console.log(arrayJefe.includes(' estamos enviando una patrulla esta yendo su casa '));
+// console.log(arrayJefe.includes('ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla para su casa', ' estamos enviando una patrulla esta yendo su casa '));
+// console.log(arrayJefe.includes(' estamos enviando una patrulla esta yendo su casa '));
 
 preguntaJefe(espera)
 
