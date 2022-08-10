@@ -6,13 +6,10 @@
     
 //     }
 // ]
-function alertaJefe(){
-    alert(enJson)
-    }
 
-const alerts = ['si ha cometido un delito y quiere confesarlo , pulse si , si no es asi pulse no']
+const alerts = ['<h3>si ha cometido un delito y quiere confesarlo , pulse si , si no es asi pulse no</h3>']
 
-alert (alerts[0]);
+let contQ = document.querySelector(".contQ").innerHTML=(alerts[0])
 
 let burbujaNo = document.createElement("p");
 burbujaNo.innerHTML = "<h3> ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa</h3>"
@@ -59,6 +56,9 @@ localStorage.setItem("producto1", enJson)
 const dialogosJson =JSON.parse(enJson)
 
 console.log(typeof enJson)
+
+let remeras = document.querySelector(".remeras").innerHTML = ('<h4> y mientras espera . puede comprar una gorra , una camiseta , tiene derecho a permanecer fabuloso </h4>')
+
 // const enJson =JSON.stringify(dialogo2)
 // console.log(typeof enJson)
 
