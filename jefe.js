@@ -77,6 +77,6 @@ let remeras = document.querySelector(".remeras").innerHTML = ('<h4> y mientras e
 
 const jefeRemeras = (jefeDialogos.dialogo3 ='bienvenido a la policia web de springfield') ? true :false
 
-jefeRemeras ?Swal.fire('bienvenido a la policia web de springfield') : Swal.fire(' ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa');Swal.fire('y mientras espera , puede comprar una gorra , una camiseta , tiene derecho a permanecer fabuloso')
+jefeRemeras ?Swal.fire('bienvenido a la policia web de springfield') : Swal.fire(' ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa')
 
 
