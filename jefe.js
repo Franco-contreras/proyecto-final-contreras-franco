@@ -27,12 +27,15 @@ const botonYes = document.querySelector("#yes")
 const botonNo = document.querySelector("#no")
 
 
-botonNo.onclick = () => { document.querySelector(".jefe").innerHTML = "<h4> ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa</h4>" ;
-Swal.fire(' ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa');}
+botonNo.onclick = () => {
+    document.querySelector(".jefe").innerHTML = "<h4> ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa</h4>";
+    Swal.fire(' ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa');
+}
 
 botonYes.onclick = () => {
     document.querySelector(".jefe").innerHTML = "<h4> estamos mandando un movil a su ubicacion</h4>"
-;Swal.fire('estamos mandando un movil a su ubicacion'); }
+        ; Swal.fire('estamos mandando un movil a su ubicacion');
+}
 
 
 console.log(botonNo);
@@ -75,9 +78,9 @@ let remeras = document.querySelector(".remeras").innerHTML = ('<h4> y mientras e
 --------------------------- FUNCION TERNARIA---------------------------------------
 -----------------------------------------------------------------------------------*/
 
-const jefeRemeras = (jefeDialogos.dialogo3 ='bienvenido a la policia web de springfield') ? true :false
+const jefeRemeras = (jefeDialogos.dialogo3 = 'bienvenido a la policia web de springfield') ? true : false
 
-jefeRemeras ?Swal.fire('bienvenido a la policia web de springfield') : Swal.fire(' ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa')
+jefeRemeras ? Swal.fire('bienvenido a la policia web de springfield') : Swal.fire(' ha pulsado no, osea que si ha cometido un delito, pero no quiere confesarlo un auto patrulla esta yendo para su casa')
 
 
 
@@ -85,19 +88,28 @@ jefeRemeras ?Swal.fire('bienvenido a la policia web de springfield') : Swal.fire
 -----------------------------------FETCH---------------------------------------------
 --------------------------------------------------------------------------------------*/
 
-const buscarQuoteApi = () => {
-    fetch("https://thesimpsonsquoteapi.glitch.me/quotes?character=apu")
-        .then((response) => response.json())
-        .then(informacion => {
-            console.log(informacion);
-        })
+//mostrarInfo();
 
-    const mostrarInfo = (informacion) => {
-        console.log(informacion)
-    }
-    document.getElementById('apuFetch').innerHTML(informacion.quote)
+// con async await
+async function foo() {
+    let obj;
+
+    const res = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes?character=apu')
+
+    obj = await res.json();
+
+    console.log(obj);
+
+    const laFrase = obj[0].quote;
+
+    const div = document.querySelector("#apuFetch"); //
+
+    div.innerHTML = laFrase; // 
+
+
 }
 
-buscarQuoteApi()
-mostrarInfo()
+foo();
+
+
 
